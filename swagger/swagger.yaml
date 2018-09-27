@@ -187,6 +187,26 @@ paths:
           schema:
             $ref: "#/definitions/TickerResult"
 
+  /tok/ticker/{symbol}:
+    get:
+      tags: [tok.com]
+      summary: get ticker info
+      description: get ticker info by symbol
+      produces:
+        - application/json
+      parameters:
+        - name: symbol
+          in: path
+          description: the symbol string.
+          required: true
+          type: string
+      responses:
+        200:
+          description: ticker response
+          schema:
+            type: string
+            #$ref: "#/definitions/TickerResult"
+
 definitions:
 
   TokenInfoResult:

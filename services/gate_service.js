@@ -1,5 +1,4 @@
-//import gate from '../utils/gate'
-import gate_axios from '../utils/gate_axios'
+import gate_axios from '../utils/tok_axios'
 
 export async function getPrice(ctx) {
   let param = ctx.params.ticker_pair
